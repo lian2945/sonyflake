@@ -5,5 +5,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("io.github.lian2945.sonyflake")
-public class AutoConfiguration {
+public class SonyflakeAutoConfiguration {
 }
