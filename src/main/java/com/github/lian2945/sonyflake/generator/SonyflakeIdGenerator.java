@@ -1,8 +1,8 @@
-package io.github.lian2945.sonyflake.generator;
+package com.github.lian2945.sonyflake.generator;
 
 import org.hibernate.engine.spi.SharedSessionContractImplementor;
 import org.hibernate.id.IdentifierGenerator;
-import io.github.lian2945.sonyflake.Sonyflake;
+import com.github.lian2945.sonyflake.Sonyflake;
 
 public class SonyflakeIdGenerator implements IdentifierGenerator {
     private final Sonyflake sonyflake;

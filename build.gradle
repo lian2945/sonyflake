@@ -4,8 +4,8 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'io.github.lian2945.sonyflake'
-version = '0.0.2'
+group = 'com.github.lian2945.sonyflake'
+version = 'v0.0.5'
 description = 'sonyflake'
 
 java {
@@ -37,9 +37,9 @@ tasks.named('test') {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'io.github.lian2945.sonyflake'
+            groupId = 'com.github.lian2945.sonyflake'
             artifactId = 'sonyflake'
-            version = '0.0.2'
+            version = 'v0.0.5'
 
             from components.java
         }

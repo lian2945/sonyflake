@@ -1,4 +1,4 @@
-package io.github.lian2945.sonyflake.properties;
+package com.github.lian2945.sonyflake.properties;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 
-import static io.github.lian2945.sonyflake.constants.SonyflakeConstants.*;
+import static com.github.lian2945.sonyflake.constants.SonyflakeConstants.*;
 
 @Validated
 @ConfigurationProperties(prefix = "sonyflake")

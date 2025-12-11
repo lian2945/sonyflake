@@ -1,9 +1,9 @@
-package io.github.lian2945.sonyflake.config;
+package com.github.lian2945.sonyflake.config;
 
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationPropertiesScan(basePackages = "io.github.lian2945.sonyflake.properties")
+@ConfigurationPropertiesScan(basePackages = "com.github.lian2945.sonyflake.properties")
 public class SonyflakePropertiesConfiguration {
 }

@@ -1,9 +1,9 @@
-package io.github.lian2945.sonyflake;
+package com.github.lian2945.sonyflake;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import io.github.lian2945.sonyflake.properties.SonyflakeProperties;
+import com.github.lian2945.sonyflake.properties.SonyflakeProperties;
 
 @SpringBootApplication
 @EnableConfigurationProperties(SonyflakeProperties.class)

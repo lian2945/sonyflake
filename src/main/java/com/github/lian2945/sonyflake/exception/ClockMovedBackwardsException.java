@@ -1,6 +1,6 @@
-package io.github.lian2945.sonyflake.exception;
+package com.github.lian2945.sonyflake.exception;
 
-import static io.github.lian2945.sonyflake.constants.SonyflakeConstants.TICK_MILLIS;
+import static com.github.lian2945.sonyflake.constants.SonyflakeConstants.TICK_MILLIS;
 
 public class ClockMovedBackwardsException extends RuntimeException {
 

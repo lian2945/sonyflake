@@ -1,7 +1,7 @@
-package io.github.lian2945.sonyflake.annotation;
+package com.github.lian2945.sonyflake.annotation;
 
 import org.hibernate.annotations.IdGeneratorType;
-import io.github.lian2945.sonyflake.generator.SonyflakeIdGenerator;
+import com.github.lian2945.sonyflake.generator.SonyflakeIdGenerator;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,13 +1,13 @@
-package io.github.lian2945.sonyflake;
+package com.github.lian2945.sonyflake;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import io.github.lian2945.sonyflake.exception.ClockMovedBackwardsException;
-import io.github.lian2945.sonyflake.properties.SonyflakeProperties;
+import com.github.lian2945.sonyflake.exception.ClockMovedBackwardsException;
+import com.github.lian2945.sonyflake.properties.SonyflakeProperties;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import static io.github.lian2945.sonyflake.constants.SonyflakeConstants.*;
+import static com.github.lian2945.sonyflake.constants.SonyflakeConstants.*;
 
 @Component
 public class Sonyflake {

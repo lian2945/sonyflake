@@ -1,7 +1,6 @@
-package io.github.lian2945.sonyflake.constants;
+package com.github.lian2945.sonyflake.constants;
 
 public final class SonyflakeConstants {
-    public static final long TIME_BITS = 39L;
     public static final long SEQUENCE_BITS = 8L;
     public static final long MACHINE_BITS = 16L;
 

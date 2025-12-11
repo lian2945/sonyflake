@@ -1,4 +1,4 @@
-package io.github.lian2945.sonyflake;
+package com.github.lian2945.sonyflake;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
