@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'signing'
+}
+
+group = 'io.github.lian2945.sonyflake'
+version = '1.0.0'
+description = 'sonyflake'
+
+publishing {
+    publications {
+        create("mavenJava", MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-validation:4.0.0'
+    implementation 'org.hibernate:hibernate-core:7.1.11.Final'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += '-parameters'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
