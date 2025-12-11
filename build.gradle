@@ -1,20 +1,12 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '4.0.0' apply false
     id 'maven-publish'
-    id 'signing'
 }
 
 group = 'io.github.lian2945.sonyflake'
 version = '1.0.0'
 description = 'sonyflake'
-
-publishing {
-    publications {
-        create("mavenJava", MavenPublication) {
-            from(components.java)
-        }
-    }
-}
 
 java {
     toolchain {
@@ -29,6 +21,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation:4.0.0'
     implementation 'org.hibernate:hibernate-core:7.1.11.Final'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:4.0.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.0.1'
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -37,4 +31,16 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'io.github.lian2945.sonyflake'
+            artifactId = 'sonyflake'
+            version = '1.0.0'
+
+            from components.java
+        }
+    }
 }
