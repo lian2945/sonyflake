@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.bind.ConstructorBinding;
 import org.springframework.validation.annotation.Validated;
 
 import static com.github.lian2945.sonyflake.constants.SonyflakeConstants.*;
@@ -26,6 +27,7 @@ public class SonyflakeProperties {
     @NotNull(message = "epochMillis is required")
     private final Long epochMillis;
 
+    @ConstructorBinding
     public SonyflakeProperties(Long machineId, Long epochMillis) {
         this.machineId = machineId != null ? machineId : 1L;
         this.epochMillis = epochMillis != null ? epochMillis : 1735657200000L;

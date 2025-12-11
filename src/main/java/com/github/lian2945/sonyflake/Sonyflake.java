@@ -13,7 +13,7 @@ import static com.github.lian2945.sonyflake.constants.SonyflakeConstants.*;
 public class Sonyflake {
 
     private final SonyflakeProperties sonyflakeProperties;
-    // state layout: [sign(1)] [tick (39)] [machine (8)] [sequence (16)]
+    // state layout: [tick][sequence] (machine comes from properties)
     private final AtomicLong state = new AtomicLong(0L);
 
     @Autowired
@@ -29,7 +29,7 @@ public class Sonyflake {
             long prev = state.get();
 
             // Get before tick and sequence
-            long beforeTick = prev >>> (MACHINE_BITS + SEQUENCE_BITS);
+            long beforeTick = prev >>> SEQUENCE_BITS;
             long beforeSequence = prev & SEQUENCE_MAX;
 
             // Validate clock moved backwards
